@@ -26,11 +26,14 @@ body aside {
 body aside menu {
   position: relative;
   top: -70px;
-  font-size: 2em;
+  font-size: 1.4em;
   padding: 40px;
 }
 body aside menu h1 {
+  font-weight: 600;
+  font-size: 2.2em;
   margin: 20px;
+  margin-bottom: 40px;
   margin-bottom: 50px;
 }
 body aside menu nav {
@@ -42,6 +45,11 @@ body aside menu nav li {
   width: fit-content;
   transition: 0.3s;
   margin: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 body aside menu nav li:hover {
   color: rgb(0, 0, 0);
@@ -55,6 +63,9 @@ body aside menu nav li[cheked=true] {
   color: rgb(0, 0, 0);
   transform: scale(1.2);
   transform: translateX(40px);
+}
+body aside menu nav li img {
+  margin-right: 9px;
 }
 body main {
   width: 100%;

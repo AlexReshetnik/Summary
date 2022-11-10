@@ -3,6 +3,7 @@ let menu = document.querySelector('menu')
 let main = document.querySelector('main')
 let aside = document.querySelector('aside')
 let styleAside = getComputedStyle(aside)
+console.log(styleAside.width);
 let link_of_page = document.querySelectorAll('li[data-page]')
 
 
@@ -11,17 +12,19 @@ let link_of_page = document.querySelectorAll('li[data-page]')
 main.style.paddingLeft = styleAside.width
 
 window.onresize = (e) => {
+    styleAside = getComputedStyle(aside)
     main.style.paddingLeft = styleAside.width
 }
 
 
 menu.addEventListener('click', e => {
-    if (e.target.hasAttribute("data-page")) {
+    let item = e.target.parentElement
+    if (item.hasAttribute("data-page")) {
         link_of_page.forEach(i => i.setAttribute("cheked", "false"))
-        e.target.setAttribute("cheked", "true")
+        item.setAttribute("cheked", "true")
 
         pages.forEach(i => {
-            if (e.target.dataset.page == i.dataset.page) {
+            if (item.dataset.page == i.dataset.page) {
                 i.setAttribute("cheked", "true")
                 i.style.zIndex = 2
             } 

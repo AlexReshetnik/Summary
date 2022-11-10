@@ -27,10 +27,13 @@ body {
         menu {
             position: relative;
             top: -70px;
-            font-size: 2em;
+            font-size: 1.4em;
             padding: 40px;
             h1 {
+                font-weight: 600;
+                font-size: 2.2em;
                 margin: 20px;
+                margin-bottom: 40px;
                 margin-bottom: 50px;
             }
 
@@ -53,6 +56,17 @@ body {
                         transform: translateX(40px);
                     }
                     margin: 20px;
+                    margin-top: 50px ;
+                    margin-bottom: 50px;
+                    display: flex;
+                   align-items: center;
+                   justify-content: center;
+                    img{
+                        margin-right: 9px;
+                    }
+                    span{
+
+                    }
                 }
             }
         }
