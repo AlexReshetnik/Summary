@@ -1,0 +1,260 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*[data-animation=start] {
+  transition: 0ms;
+  z-index: 0;
+  transform: translateX(100vw);
+}
+
+*[data-animation=end] {
+  transition: 0.6s;
+  transform: translateX(0px);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  background-color: white;
+}
+body aside {
+  letter-spacing: 1.6px;
+  z-index: 5;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.8039215686);
+  height: 100%;
+  border-right: 1px solid rgba(0, 0, 0, 0.384);
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body aside menu {
+  position: relative;
+  top: -70px;
+  font-size: 1.2em;
+  padding: 40px;
+}
+body aside menu h1 {
+  font-weight: 600;
+  font-size: 2.4em;
+  margin: 15px;
+  margin-bottom: 50px;
+}
+body aside menu nav {
+  list-style: none;
+}
+body aside menu nav li {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: 0.3s;
+  margin-left: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body aside menu nav li:hover {
+  color: rgb(0, 0, 0);
+}
+body aside menu nav li:active {
+  color: rgb(0, 0, 0);
+}
+body aside menu nav li[cheked=true] {
+  font-weight: 400;
+  font-size: 120%;
+  color: rgb(0, 0, 0);
+  transform: scale(1.2);
+  transform: translateX(40px);
+}
+body aside menu nav li img {
+  margin-right: 9px;
+}
+body main {
+  width: 100%;
+  height: 100%;
+}
+body main section article {
+  background-color: white;
+  font-weight: 300;
+  font-size: 1.2em;
+  padding: 100px;
+  padding-top: 80px;
+  position: absolute;
+  margin-left: 0;
+  height: 100vh;
+  width: 100%;
+  transition: 0.25s cubic-bezier(0, 0.51, 0.13, 0.7);
+}
+body main section article[cheked=false] {
+  transition: 0s;
+  transform: translateX(-100vw);
+}
+body main section article[cheked=true] {
+  transform: translateX(0vw);
+}
+body main section .Introduction {
+  padding-left: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  z-index: 2;
+}
+body main section .Introduction .bloc {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+body main section .Introduction .bloc .photo img {
+  border-radius: 30px;
+  box-shadow: inset 5px 5px 12px 0px #ffffff;
+}
+body main section .Introduction .bloc .description {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+body main section .Introduction .bloc .description .item h1 {
+  font-weight: 600;
+  font-size: 2.3em;
+  margin: 10px;
+}
+body main section .Introduction .bloc .description .item h2 {
+  margin: 10px;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+body main section .Introduction .bloc .description .item h4 {
+  letter-spacing: 0.8px;
+  font-weight: 700;
+  font-size: 1em;
+}
+body main section .Introduction .bloc .description .item h5 {
+  font-weight: 600;
+  font-size: 0.9em;
+}
+body main section .Introduction .lists {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+body main section .Introduction .lists div {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+body main section .Introduction .lists div h4 {
+  font-weight: 700;
+  align-items: center;
+  text-align: end;
+  width: 350px;
+}
+body main section .Introduction .lists div ul {
+  list-style: disc inside;
+}
+body main section .Skills {
+  letter-spacing: 0.8px;
+  padding: 100px 100px 100px 250px;
+  display: flex;
+  flex-direction: row;
+  gap: 90px;
+}
+body main section .Skills ul {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+body main section .Skills ul li {
+  margin: 5px;
+}
+body main section .Skills ul li:nth-of-type(1) {
+  list-style: none;
+  position: relative;
+  right: 40px;
+}
+body main section .Skills ul li h3 {
+  list-style: none;
+}
+body main section .Skills div {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+body main section .Skills div ul ul {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+body main section .Skills div ul ul li {
+  margin: 5px;
+}
+body main section .Skills div ul ul li:nth-of-type(1) {
+  list-style: none;
+  position: relative;
+  right: 40px;
+}
+body main section .Skills div ul ul li h3 {
+  list-style: none;
+}
+body main section .Projects {
+  letter-spacing: 0.8px;
+  padding: 50px 50px 50px 50px;
+}
+body main section .Projects ul {
+  list-style: none;
+  display: flex;
+  width: 1500px;
+  flex-wrap: wrap;
+}
+body main section .Projects ul li {
+  font-size: 0.8em;
+  width: 300px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+body main section .Projects ul li div a {
+  margin: 10px;
+  display: flex;
+  gap: 50px;
+  justify-content: space-evenly;
+}
+body main section .Contacts {
+  padding: 200px;
+  padding-right: 300px;
+}
+body main section .Contacts ul li {
+  margin: 20px;
+  list-style: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+body main section .Contacts ul li a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+body main section .Contacts ul li a span {
+  letter-spacing: 1.2px;
+  color: black;
+  font-size: 1.7em;
+}
+body main section .Contacts ul li:hover {
+  transition: 0.2 ease-out;
+  transform: scale(1.1);
+}
+body main section .Contacts ul li:active {
+  opacity: 0.7;
+}/*# sourceMappingURL=style.css.map */

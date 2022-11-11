@@ -1,0 +1,124 @@
+@use "mixins/Introduction" as *;
+@use "mixins/Contacts" as *;
+@use "mixins/Skills" as *;
+@use "mixins/Projects" as *;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*[data-animation="start"] {
+    transition: 0ms;
+    z-index: 0;
+    transform: translateX(100vw);
+}
+*[data-animation="end"] {
+    transition: 0.6s;
+    transform: translateX(0px);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    background-color: white;
+
+    aside {
+        letter-spacing: 1.6px;
+        z-index: 5;
+        background-color: rgb(255, 255, 255);
+        position: fixed;
+        box-shadow: 0px 0px 20px 0px #000000cd;
+        height: 100%;
+        border-right: 1px solid rgba(0, 0, 0, 0.384);
+        color: rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        menu {
+            position: relative;
+            top: -70px;
+            font-size: 1.2em;
+            padding: 40px;
+            h1 {
+                font-weight: 600;
+                font-size: 2.4em;
+                margin: 15px;
+                margin-bottom: 50px;
+            }
+
+            nav {
+                list-style: none;
+                li {
+                    width: fit-content;
+                    transition: 0.3s;
+                    &:hover {
+                        color: rgb(0, 0, 0);
+                    }
+                    &:active {
+                        color: rgb(0, 0, 0);
+                    }
+                    &[cheked="true"] {
+                        font-weight: 400;
+                        font-size: 120%;
+                        color: rgb(0, 0, 0);
+                        transform: scale(1.2);
+                        transform: translateX(40px);
+                    }
+                    margin-left: 20px;
+                    margin-top: 50px;
+                    margin-bottom: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img {
+                        margin-right: 9px;
+                    }
+                }
+            }
+        }
+    }
+    main {
+        width: 100%;
+        height: 100%;
+
+        section {
+            article {
+                background-color: white;
+                font-weight: 300;
+                font-size: 1.2em;
+                padding: 100px;
+                padding-top: 80px;
+                position: absolute;
+                margin-left: 0;
+                height: 100vh;
+                width: 100%;
+                transition: 0.25s cubic-bezier(0, 0.51, 0.13, 0.7);
+
+                &[cheked="false"] {
+                    transition: 0s;
+                    transform: translateX(-100vw);
+                }
+                &[cheked="true"] {
+                    //border-radius: 0 50px 50px 0;
+                    transform: translateX(0vw);
+                }
+            }
+            .Introduction {
+                @include Introduction();
+            }
+            .Skills {
+                @include Skills();
+            }
+            .Projects {
+                @include Projects();
+            }
+            .Contacts {
+                @include Contacts();
+            }
+        }
+    }
+}
