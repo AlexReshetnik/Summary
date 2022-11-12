@@ -1,5 +1,5 @@
 let pages = document.querySelectorAll('article[data-page_id]')
-let animation_li = document.querySelectorAll('li[data-animation]')
+let animation_li = document.querySelectorAll('[data-animation]')
 let menu = document.querySelector('menu')
 let main = document.querySelector('main')
 let aside = document.querySelector('aside')
@@ -7,11 +7,15 @@ let styleAside = getComputedStyle(aside)
 let link_of_page = document.querySelectorAll('li[data-page_id]')
 
 
-
+console.log(parseFloat(getComputedStyle(main).width));
+console.log(parseFloat(styleAside.width));
 
 main.style.marginLeft = styleAside.width
+//main.style.width = parseFloat(getComputedStyle(main).width) - 100 + "px"
+
 window.onresize = (e) => {
     styleAside = getComputedStyle(aside)
+   
     main.style.marginLeft = styleAside.width
 }
 rum_anim()

@@ -7,7 +7,7 @@
 *[data-animation=start] {
   transition: 0ms;
   z-index: 0;
-  transform: translateX(100vw);
+  transform: translateX(200vw);
 }
 
 *[data-animation=end] {
@@ -29,7 +29,7 @@ body aside {
   background-color: rgb(255, 255, 255);
   position: fixed;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.8039215686);
-  height: 100%;
+  height: 100vh;
   border-right: 1px solid rgba(0, 0, 0, 0.384);
   color: rgb(0, 0, 0);
   display: flex;
@@ -38,13 +38,13 @@ body aside {
 }
 body aside menu {
   position: relative;
-  top: -70px;
+  top: -4%;
   font-size: 1.2em;
   padding: 40px;
 }
 body aside menu h1 {
   font-weight: 600;
-  font-size: 2.4em;
+  font-size: 2.6em;
   margin: 15px;
   margin-bottom: 50px;
 }
@@ -79,39 +79,77 @@ body aside menu nav li[cheked=true] {
 body aside menu nav li img {
   margin-right: 9px;
 }
+@media (min-width: 992px) and (max-width: 1300px) {
+  body aside menu {
+    padding: 5px;
+    transform: scale(0.8);
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  body aside menu {
+    padding: 0px;
+    transform: scale(0.8);
+  }
+}
+@media (min-width: 68px) and (max-width: 768px) {
+  body aside menu menu {
+    padding: 100px !important;
+  }
+  body aside menu h1 {
+    font-size: 1em;
+  }
+  body aside menu span {
+    display: none;
+  }
+}
+@media (min-width: 68px) and (max-width: 768px) {
+  body aside menu {
+    padding: 0px !important;
+  }
+}
 body main {
   width: 100%;
   height: 100%;
 }
+body main section {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 body main section article {
+  width: 100%;
   background-color: white;
+  height: 100%;
   font-weight: 300;
   font-size: 1.2em;
-  padding: 100px;
-  padding-top: 80px;
   position: absolute;
-  margin-left: 0;
-  height: 100vh;
-  width: 100%;
   transition: 0.25s cubic-bezier(0, 0.51, 0.13, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 body main section article[cheked=false] {
   transition: 0s;
-  transform: translateX(-100vw);
+  transform: translateX(-100vw) scale(0);
 }
 body main section article[cheked=true] {
-  transform: translateX(0vw);
+  transform: translateX(0vw) scale(1);
 }
 body main section .Introduction {
-  padding-left: 200px;
-  display: flex;
+  left: -5%;
   flex-direction: column;
-  gap: 50px;
+  gap: 5%;
   z-index: 2;
+  padding: 2%;
 }
 body main section .Introduction .bloc {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
   gap: 30px;
 }
 body main section .Introduction .bloc .photo img {
@@ -145,6 +183,7 @@ body main section .Introduction .bloc .description .item h5 {
 body main section .Introduction .lists {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 25px;
 }
 body main section .Introduction .lists div {
@@ -161,11 +200,67 @@ body main section .Introduction .lists div h4 {
 body main section .Introduction .lists div ul {
   list-style: disc inside;
 }
+@media (min-width: 1100px) and (max-width: 1300px) {
+  body main section .Introduction {
+    left: 0;
+    padding: 15% 0 15% 0;
+  }
+  body main section .Introduction img {
+    height: 300px;
+    width: 300px;
+  }
+  body main section .Introduction .bloc {
+    gap: 10px;
+  }
+  body main section .Introduction article {
+    font-size: 0.93em;
+  }
+  body main section .Introduction h4 {
+    width: 200px !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1100px) {
+  body main section .Introduction {
+    left: 0;
+    padding: 15% 3% 15% 0;
+  }
+  body main section .Introduction img {
+    height: 300px;
+    width: 300px;
+  }
+  body main section .Introduction .bloc {
+    gap: 10px;
+  }
+  body main section .Introduction h4 {
+    width: 100px !important;
+  }
+}
+@media (min-width: 100px) and (max-width: 992px) {
+  body main section .Introduction {
+    left: 0;
+    padding: 10% 5% 10% 5%;
+  }
+  body main section .Introduction img {
+    height: 250px;
+    width: 250px;
+  }
+  body main section .Introduction .bloc {
+    gap: 0px;
+  }
+  body main section .Introduction .lists div {
+    margin: 5px;
+    gap: 0px;
+    flex-direction: column;
+  }
+  body main section .Introduction h4 {
+    text-align: start !important;
+    width: 250px !important;
+  }
+}
 body main section .Skills {
   letter-spacing: 0.8px;
-  padding: 100px 100px 100px 250px;
-  display: flex;
   flex-direction: row;
+  padding: 5%;
   gap: 90px;
 }
 body main section .Skills ul {
@@ -206,32 +301,50 @@ body main section .Skills div ul ul li h3 {
   list-style: none;
 }
 body main section .Projects {
-  letter-spacing: 0.8px;
-  padding: 50px 50px 50px 50px;
+  overflow-x: scroll;
+  letter-spacing: 0.3px;
+  align-items: flex-start;
 }
 body main section .Projects ul {
+  margin-top: 3%;
   list-style: none;
   display: flex;
-  width: 1500px;
   flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 70px;
 }
 body main section .Projects ul li {
   font-size: 0.8em;
-  width: 300px;
+  width: 400px;
   margin: 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 0px;
+}
+body main section .Projects ul li video {
+  border-radius: 6px;
 }
 body main section .Projects ul li div a {
-  margin: 10px;
+  color: black;
+  margin: 5px;
   display: flex;
-  gap: 50px;
   justify-content: space-evenly;
+  text-decoration: none;
+}
+body main section .Projects ul li div a h3 {
+  align-self: center;
+  font-size: 1.4em;
+}
+body main section .Projects ul li div a:hover {
+  color: rgb(70, 70, 70);
+  text-decoration: underline;
+}
+body main section .Projects ul li div p {
+  text-align: justify;
+  text-indent: 30px;
 }
 body main section .Contacts {
-  padding: 200px;
-  padding-right: 300px;
+  left: -5%;
 }
 body main section .Contacts ul li {
   margin: 20px;
@@ -257,4 +370,24 @@ body main section .Contacts ul li:hover {
 }
 body main section .Contacts ul li:active {
   opacity: 0.7;
+}
+@media (min-width: 1100px) and (max-width: 1300px) {
+  body main section article {
+    font-size: 1.1em;
+  }
+}
+@media (min-width: 992px) and (max-width: 1100px) {
+  body main section article {
+    font-size: 0.9em;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  body main section article {
+    font-size: 0.9em;
+  }
+}
+@media (min-width: 68px) and (max-width: 768px) {
+  body main section article {
+    font-size: 0.9em;
+  }
 }/*# sourceMappingURL=style.css.map */

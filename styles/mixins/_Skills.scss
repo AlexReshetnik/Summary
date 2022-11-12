@@ -1,9 +1,8 @@
 @mixin Skills() {
     letter-spacing: 0.8px;
-    padding: 100px 100px 100px 250px;
-   
-    display: flex;
+
     flex-direction: row;
+    padding: 5%;
     gap: 90px;
     ul {
         display: flex;

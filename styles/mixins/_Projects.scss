@@ -1,35 +1,51 @@
 @mixin Projects() {
-    letter-spacing: 0.8px;
-    padding: 50px 50px 50px 50px;
+    overflow-x: scroll;
+    letter-spacing: 0.3px;
+    align-items: flex-start;
     ul {
+        margin-top: 3%;
         list-style: none;
         display: flex;
-        width:1500px;
-        flex-wrap:wrap;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 70px;
         li {
             font-size: 0.8em;
-            width: 300px;
-            
+            width: 400px;
+
             margin: 20px;
             display: flex;
             flex-direction: column;
-            gap: 20px;
-           
+            gap: 0px;
+
             video {
+                border-radius: 6px;
             }
             div {
                 a {
-                    margin: 10px;
+                    color: black;
+                    margin: 5px;
                     display: flex;
-                    gap: 50px;
+                   
                     justify-content: space-evenly;
+                    text-decoration: none;
                     h3 {
                        
+                        align-self: center;
+                        font-size: 1.4em;
                     }
                     img {
                     }
+                    &:hover{
+                          color: rgb(70, 70, 70);
+                         text-decoration:underline;
+                    }
                 }
-                p {
+                 
+                p {text-align: justify;
+                   
+                   
+                    text-indent: 30px;
                 }
             }
         }
