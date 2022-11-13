@@ -132,17 +132,14 @@ body {
         @media (max-width: 768px) {
             menu {
                 padding: 5px !important;
+                 top: 0px !important;
             }
         }
     }
     @media (max-width: 768px) {
-        .menu {
-            top: 0px !important;
-        }
+       
         aside {
-            .menu {
-                top: 0px !important;
-            }
+           
             width: 100%;
             height: fit-content;
 

@@ -133,21 +133,16 @@ body aside menu nav li img {
 @media (max-width: 768px) {
   body aside menu {
     padding: 5px !important;
+    top: 0px !important;
   }
 }
 @media (max-width: 768px) {
-  body .menu {
-    top: 0px !important;
-  }
   body aside {
     width: 100%;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     bottom: 0;
-  }
-  body aside .menu {
-    top: 0px !important;
   }
   body * {
     margin-bottom: 0px !important;
