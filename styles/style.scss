@@ -6,7 +6,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-   
 }
 
 *[data-animation="start"] {
@@ -22,7 +21,7 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-weight: 300;
-     overflow-x: hidden;
+    overflow-x: hidden;
     height: 100vh;
     display: flex;
     background-color: white;
@@ -112,16 +111,36 @@ body {
                     transform: translateX(0px) scale(1.5) !important;
                 }
             }
+            @media (max-width: 650px) {
+               img {
+                    transform: scale(0.7) !important;
+                }
+                li{
+                   margin-left: 1px !important;
+                   margin-right: 1px !important;
+                   img{
+                     margin-right: 0px !important;
+                   }
+                }
+                li[cheked="true"] {
+                    transform: translateX(0px) scale(1.4) !important;
+                }
+            }
         }
-        @media (min-width: 768px) and(max-width: 992px) {
+        @media (max-width: 992px) {
             letter-spacing: normal;
             menu {
                 margin: 5px;
             }
         }
-        @media (min-width: 68px) and(max-width: 768px) {
+        @media (max-width: 768px) {
             menu {
                 padding: 5px !important;
+            }
+        }
+        @media (max-width: 650px) {
+            menu {
+                padding: 3px !important;
             }
         }
     }
@@ -137,7 +156,7 @@ body {
             align-items: center;
             justify-content: center;
             article {
-                 overflow-x: hidden;
+                overflow-x: hidden;
                 width: 100%;
                 background-color: white;
                 height: 100%;

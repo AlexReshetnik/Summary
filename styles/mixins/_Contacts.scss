@@ -1,5 +1,5 @@
 @mixin Contacts() {
-   left: -5%;
+    left: -5%;
     ul {
         li {
             margin: 20px;
@@ -27,5 +27,8 @@
                 opacity: 0.7;
             }
         }
+    }
+    @media (max-width: 650px) {
+         left: 0%;
     }
 }

@@ -112,7 +112,22 @@ body aside menu nav li img {
     transform: translateX(0px) scale(1.5) !important;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (max-width: 650px) {
+  body aside menu img {
+    transform: scale(0.7) !important;
+  }
+  body aside menu li {
+    margin-left: 1px !important;
+    margin-right: 1px !important;
+  }
+  body aside menu li img {
+    margin-right: 0px !important;
+  }
+  body aside menu li[cheked=true] {
+    transform: translateX(0px) scale(1.4) !important;
+  }
+}
+@media (max-width: 992px) {
   body aside {
     letter-spacing: normal;
   }
@@ -120,9 +135,14 @@ body aside menu nav li img {
     margin: 5px;
   }
 }
-@media (min-width: 68px) and (max-width: 768px) {
+@media (max-width: 768px) {
   body aside menu {
     padding: 5px !important;
+  }
+}
+@media (max-width: 650px) {
+  body aside menu {
+    padding: 3px !important;
   }
 }
 body main {
@@ -323,6 +343,17 @@ body main section .Skills div ul ul li:nth-of-type(1) {
 body main section .Skills div ul ul li h3 {
   list-style: none;
 }
+@media (min-width: 100px) and (max-width: 650px) {
+  body main section .Skills {
+    justify-content: flex-start;
+    flex-direction: column !important;
+    padding: 8% 0 8% 15%;
+    gap: 30px;
+  }
+  body main section .Skills div {
+    gap: 30px;
+  }
+}
 @media (max-height: 830px) {
   body main section .Skills {
     align-items: flex-start;
@@ -401,6 +432,11 @@ body main section .Contacts ul li:hover {
 }
 body main section .Contacts ul li:active {
   opacity: 0.7;
+}
+@media (max-width: 650px) {
+  body main section .Contacts {
+    left: 0%;
+  }
 }
 @media (min-width: 1100px) and (max-width: 1300px) {
   body main section article {
