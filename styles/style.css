@@ -37,9 +37,8 @@ body aside {
   justify-content: center;
 }
 body aside menu {
-  position: -webkit-sticky;
-  position: sticky;
-  top: -4%;
+  position: relative;
+  top: -6%;
   font-size: 1.2em;
   padding: 40px;
 }
@@ -47,7 +46,7 @@ body aside menu h1 {
   font-weight: 600;
   font-size: 2.6em;
   margin: 15px;
-  margin-bottom: 50px;
+  margin-bottom: 12%;
 }
 body aside menu nav {
   list-style: none;
