@@ -106,17 +106,14 @@ body {
                 span {
                     display: none;
                 }
-                img {
-                    transform: scale(1) !important;
-                }
-                li[cheked="true"] {
-                    transform: translateX(0px) scale(1.5) !important;
-                }
+               
+               
            
                 img {
                     transform: scale(0.7) !important;
                 }
                 li {
+                    margin-bottom: 2px !important;
                     margin-left: 1px !important;
                     margin-right: 1px !important;
                     img {

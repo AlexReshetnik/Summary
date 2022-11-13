@@ -108,15 +108,10 @@ body aside menu nav li img {
     display: none;
   }
   body aside menu img {
-    transform: scale(1) !important;
-  }
-  body aside menu li[cheked=true] {
-    transform: translateX(0px) scale(1.5) !important;
-  }
-  body aside menu img {
     transform: scale(0.7) !important;
   }
   body aside menu li {
+    margin-bottom: 2px !important;
     margin-left: 1px !important;
     margin-right: 1px !important;
   }
