@@ -431,7 +431,7 @@ body main section .Projects ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 70px;
+  gap: 20px;
 }
 body main section .Projects ul li {
   font-size: 0.8em;
