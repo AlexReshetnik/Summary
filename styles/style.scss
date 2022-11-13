@@ -39,7 +39,7 @@ body {
         flex-direction: column;
         justify-content: center;
         menu {
-            position: relative;
+            position:sticky;
             top: -4%;
             font-size: 1.2em;
             padding: 40px;
@@ -140,9 +140,12 @@ body {
     @media (max-width: 768px) {
 
         aside {
+            .menu{
+                top: 0px !important;
+            }
             width: 100%;
             height: fit-content;
-            position: fixed;
+            
             bottom: 0;
         }
         *{

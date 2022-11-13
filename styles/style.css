@@ -37,7 +37,8 @@ body aside {
   justify-content: center;
 }
 body aside menu {
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
   top: -4%;
   font-size: 1.2em;
   padding: 40px;
@@ -141,8 +142,10 @@ body aside menu nav li img {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    position: fixed;
     bottom: 0;
+  }
+  body aside .menu {
+    top: 0px !important;
   }
   body * {
     margin-bottom: 0px !important;
