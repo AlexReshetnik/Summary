@@ -136,6 +136,9 @@ body aside menu nav li img {
   }
 }
 @media (max-width: 768px) {
+  body .menu {
+    top: 0px !important;
+  }
   body aside {
     width: 100%;
     height: -webkit-fit-content;

@@ -39,7 +39,7 @@ body {
         flex-direction: column;
         justify-content: center;
         menu {
-            position:relative;
+            position: relative;
             top: -6%;
             font-size: 1.2em;
             padding: 40px;
@@ -47,7 +47,7 @@ body {
                 font-weight: 600;
                 font-size: 2.6em;
                 margin: 15px;
-                margin-bottom:12%;
+                margin-bottom: 12%;
             }
 
             nav {
@@ -106,9 +106,7 @@ body {
                 span {
                     display: none;
                 }
-               
-               
-           
+
                 img {
                     transform: scale(0.7) !important;
                 }
@@ -138,17 +136,19 @@ body {
         }
     }
     @media (max-width: 768px) {
-
+        .menu {
+            top: 0px !important;
+        }
         aside {
-            .menu{
+            .menu {
                 top: 0px !important;
             }
             width: 100%;
             height: fit-content;
-            
+
             bottom: 0;
         }
-        *{
+        * {
             margin-bottom: 0px !important;
             padding-bottom: 0px !important;
         }
@@ -163,8 +163,8 @@ body {
             }
             flex-direction: row !important;
         }
-        article{
-            padding-bottom: 150px!important;
+        article {
+            padding-bottom: 150px !important;
         }
     }
 
