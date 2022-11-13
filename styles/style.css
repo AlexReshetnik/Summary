@@ -146,7 +146,7 @@ body aside menu nav li img {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    position: absolute;
+    position: fixed;
     bottom: 0;
   }
   body nav {
