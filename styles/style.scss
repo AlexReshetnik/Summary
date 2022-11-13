@@ -52,12 +52,14 @@ body {
 
             nav {
                 list-style: none;
+                display: flex;
+                flex-direction: column;
                 li {
                     width: fit-content;
                     transition: 0.3s;
                     margin-left: 20px;
-                    margin-top: 50px;
-                    margin-bottom: 50px;
+                    margin-top: 30px;
+                    margin-bottom: 30px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -110,20 +112,19 @@ body {
                 li[cheked="true"] {
                     transform: translateX(0px) scale(1.5) !important;
                 }
-            }
-            @media (max-width: 650px) {
-               img {
+           
+                img {
                     transform: scale(0.7) !important;
                 }
-                li{
-                   margin-left: 1px !important;
-                   margin-right: 1px !important;
-                   img{
-                     margin-right: 0px !important;
-                   }
+                li {
+                    margin-left: 1px !important;
+                    margin-right: 1px !important;
+                    img {
+                        margin-right: 0px !important;
+                    }
                 }
                 li[cheked="true"] {
-                    transform: translateX(0px) scale(1.4) !important;
+                    transform: translateX(0px) scale(1.2) !important;
                 }
             }
         }
@@ -138,10 +139,28 @@ body {
                 padding: 5px !important;
             }
         }
-        @media (max-width: 650px) {
-            menu {
-                padding: 3px !important;
+    }
+    @media (max-width: 768px) {
+
+        aside {
+            width: 100%;
+            height: fit-content;
+            position: absolute;
+            bottom: 0;
+        }
+        nav {
+            justify-content: space-evenly;
+            li {
+                margin: 1px !important;
+                flex-direction: column !important;
+                span {
+                    display: block;
+                }
             }
+            flex-direction: row !important;
+        }
+        article{
+            padding-bottom: 150px!important;
         }
     }
 

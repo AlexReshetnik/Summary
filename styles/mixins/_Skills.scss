@@ -50,6 +50,7 @@
       
     }
     @media (min-width: 100px) and(max-width: 650px) {
+        align-items: flex-start;
         justify-content: flex-start;
         flex-direction: column !important;
         padding: 8% 0 8% 15%;

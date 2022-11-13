@@ -10,13 +10,19 @@ let link_of_page = document.querySelectorAll('li[data-page_id]')
 console.log(parseFloat(getComputedStyle(main).width));
 console.log(parseFloat(styleAside.width));
 
-main.style.marginLeft = styleAside.width
-//main.style.width = parseFloat(getComputedStyle(main).width) - 100 + "px"
 
+if (window.outerWidth > 768) {
+    main.style.marginLeft = styleAside.width
+}
 window.onresize = (e) => {
     styleAside = getComputedStyle(aside)
-   
-    main.style.marginLeft = styleAside.width
+
+    if (window.outerWidth > 768) {
+        console.log();
+        main.style.marginLeft = styleAside.width
+    } else {
+        main.style.marginLeft = "0px"
+    }
 }
 rum_anim()
 function rum_anim() {

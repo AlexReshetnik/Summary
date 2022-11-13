@@ -50,6 +50,8 @@ body aside menu h1 {
 }
 body aside menu nav {
   list-style: none;
+  display: flex;
+  flex-direction: column;
 }
 body aside menu nav li {
   width: -webkit-fit-content;
@@ -57,8 +59,8 @@ body aside menu nav li {
   width: fit-content;
   transition: 0.3s;
   margin-left: 20px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -111,8 +113,6 @@ body aside menu nav li img {
   body aside menu li[cheked=true] {
     transform: translateX(0px) scale(1.5) !important;
   }
-}
-@media (max-width: 650px) {
   body aside menu img {
     transform: scale(0.7) !important;
   }
@@ -124,7 +124,7 @@ body aside menu nav li img {
     margin-right: 0px !important;
   }
   body aside menu li[cheked=true] {
-    transform: translateX(0px) scale(1.4) !important;
+    transform: translateX(0px) scale(1.2) !important;
   }
 }
 @media (max-width: 992px) {
@@ -140,9 +140,28 @@ body aside menu nav li img {
     padding: 5px !important;
   }
 }
-@media (max-width: 650px) {
-  body aside menu {
-    padding: 3px !important;
+@media (max-width: 768px) {
+  body aside {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    position: absolute;
+    bottom: 0;
+  }
+  body nav {
+    justify-content: space-evenly;
+    flex-direction: row !important;
+  }
+  body nav li {
+    margin: 1px !important;
+    flex-direction: column !important;
+  }
+  body nav li span {
+    display: block;
+  }
+  body article {
+    padding-bottom: 150px !important;
   }
 }
 body main {
@@ -273,7 +292,7 @@ body main section .Introduction .lists div ul {
     width: 100px !important;
   }
 }
-@media (min-width: 100px) and (max-width: 992px) {
+@media (min-width: 650px) and (max-width: 992px) {
   body main section .Introduction {
     left: 0;
     padding: 10% 5% 10% 5%;
@@ -284,6 +303,38 @@ body main section .Introduction .lists div ul {
   }
   body main section .Introduction .bloc {
     gap: 0px;
+  }
+  body main section .Introduction .lists {
+    gap: 3px;
+  }
+  body main section .Introduction .lists div {
+    margin: 5px;
+    gap: 0px;
+    flex-direction: column;
+  }
+  body main section .Introduction h4 {
+    text-align: start !important;
+    width: 250px !important;
+  }
+}
+@media (min-width: 100px) and (max-width: 650px) {
+  body main section .Introduction {
+    left: 0;
+    padding: 10% 5% 10% 5%;
+  }
+  body main section .Introduction img {
+    height: 250px;
+    width: 250px;
+  }
+  body main section .Introduction .bloc {
+    gap: 0px;
+    flex-direction: column;
+  }
+  body main section .Introduction h1 {
+    font-size: 2.9em !important;
+  }
+  body main section .Introduction h2 {
+    font-size: 1.6em !important;
   }
   body main section .Introduction .lists {
     gap: 3px;
@@ -345,6 +396,7 @@ body main section .Skills div ul ul li h3 {
 }
 @media (min-width: 100px) and (max-width: 650px) {
   body main section .Skills {
+    align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column !important;
     padding: 8% 0 8% 15%;
@@ -366,6 +418,7 @@ body main section .Projects {
   overflow-x: scroll;
   letter-spacing: 0.3px;
   align-items: flex-start;
+  overflow-x: hidden;
 }
 body main section .Projects ul {
   margin-top: 3%;
