@@ -11,14 +11,15 @@ console.log(parseFloat(getComputedStyle(main).width));
 console.log(parseFloat(styleAside.width));
 
 
-if (window.outerWidth > 768) {
+if (document.body.clientWidth > 768) {
     main.style.marginLeft = styleAside.width
 }
 window.onresize = (e) => {
     styleAside = getComputedStyle(aside)
 
-    if (window.outerWidth > 768) {
-        console.log();
+    if (document.body.clientWidth > 768) {
+        
+        console.log(document.body.clientWidth);
         main.style.marginLeft = styleAside.width
     } else {
         main.style.marginLeft = "0px"

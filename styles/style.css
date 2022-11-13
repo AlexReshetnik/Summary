@@ -208,7 +208,7 @@ body main section .Introduction {
   z-index: 2;
   padding: 5%;
   justify-content: flex-start;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 body main section .Introduction .bloc {
   display: flex;
