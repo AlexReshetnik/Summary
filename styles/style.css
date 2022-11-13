@@ -438,6 +438,7 @@ body main section .Projects ul li {
 }
 body main section .Projects ul li video {
   border-radius: 6px;
+  background-color: rgb(201, 201, 201);
 }
 body main section .Projects ul li div a {
   color: black;
