@@ -494,7 +494,7 @@ body main section .Contacts ul li:hover {
 body main section .Contacts ul li:active {
   opacity: 0.7;
 }
-@media (max-width: 650px) {
+@media (max-width: 768px) {
   body main section .Contacts {
     left: 0%;
   }
