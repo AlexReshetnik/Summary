@@ -145,6 +145,10 @@ body {
             position: fixed;
             bottom: 0;
         }
+        *{
+            margin-bottom: 0px !important;
+            padding-bottom: 0px !important;
+        }
         nav {
             justify-content: space-evenly;
             li {
