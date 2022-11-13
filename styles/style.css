@@ -458,6 +458,14 @@ body main section .Projects ul li div p {
   text-align: justify;
   text-indent: 30px;
 }
+@media (max-width: 650px) {
+  body main section .Projects li {
+    align-items: center;
+  }
+  body main section .Projects video {
+    width: 90%;
+  }
+}
 body main section .Contacts {
   left: -5%;
 }

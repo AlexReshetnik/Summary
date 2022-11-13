@@ -27,28 +27,35 @@
                     color: black;
                     margin: 5px;
                     display: flex;
-                   
+
                     justify-content: space-evenly;
                     text-decoration: none;
                     h3 {
-                       
                         align-self: center;
                         font-size: 1.4em;
                     }
                     img {
                     }
-                    &:hover{
-                          color: rgb(70, 70, 70);
-                         text-decoration:underline;
+                    &:hover {
+                        color: rgb(70, 70, 70);
+                        text-decoration: underline;
                     }
                 }
-                 
-                p {text-align: justify;
-                   
-                   
+
+                p {
+                    text-align: justify;
+
                     text-indent: 30px;
                 }
             }
+        }
+    }
+    @media (max-width: 650px) {
+        li {
+            align-items: center;
+        }
+        video {
+            width: 90%;
         }
     }
 }
