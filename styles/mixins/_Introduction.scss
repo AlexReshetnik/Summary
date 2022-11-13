@@ -3,8 +3,9 @@
     flex-direction: column;
     gap: 5%;
     z-index: 2;
-    padding: 2%;
-
+    padding: 5%;
+    justify-content: flex-start;
+    overflow-y: scroll;
     .bloc {
         display: flex;
 
@@ -51,6 +52,8 @@
         flex-direction: column;
         justify-content: center;
         gap: 25px;
+       
+
         div {
             display: flex;
             flex-direction: row;
@@ -76,11 +79,9 @@
         }
 
         left: 0;
-        padding: 15% 0 15% 0;
 
-        article {
-            font-size: 0.93em;
-        }
+        padding: 10% 5% 10% 5%;
+
         h4 {
             width: 200px !important;
         }
@@ -95,7 +96,7 @@
         }
 
         left: 0;
-        padding: 15% 3% 15% 0;
+        padding: 10% 5% 10% 5%;
 
         h4 {
             width: 100px !important;
@@ -113,11 +114,11 @@
         left: 0;
         padding: 10% 5% 10% 5%;
         .lists {
+            gap: 3px;
             div {
                 margin: 5px;
                 gap: 0px;
                 flex-direction: column;
-               
             }
         }
         h4 {

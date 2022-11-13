@@ -18,7 +18,7 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-weight: 300;
-  overflow: hidden;
+  overflow-x: hidden;
   height: 100vh;
   display: flex;
   background-color: white;
@@ -62,6 +62,7 @@ body aside menu nav li {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 120%;
 }
 body aside menu nav li:hover {
   color: rgb(0, 0, 0);
@@ -73,38 +74,55 @@ body aside menu nav li[cheked=true] {
   font-weight: 400;
   font-size: 120%;
   color: rgb(0, 0, 0);
-  transform: scale(1.2);
-  transform: translateX(40px);
+  transform: translateX(40px) scale(1.2);
 }
 body aside menu nav li img {
   margin-right: 9px;
 }
-@media (min-width: 992px) and (max-width: 1300px) {
+@media (max-width: 1300px) {
   body aside menu {
     padding: 5px;
-    transform: scale(0.8);
+  }
+  body aside menu li {
+    font-size: 90% !important;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (max-width: 992px) {
   body aside menu {
     padding: 0px;
-    transform: scale(0.8);
+    font-size: 100% !important;
+  }
+  body aside menu li[cheked=true] {
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    transform: translateX(0px) scale(1.2) !important;
   }
 }
-@media (min-width: 68px) and (max-width: 768px) {
-  body aside menu menu {
-    padding: 100px !important;
-  }
+@media (max-width: 768px) {
   body aside menu h1 {
-    font-size: 1em;
+    display: none;
   }
   body aside menu span {
     display: none;
   }
+  body aside menu img {
+    transform: scale(1) !important;
+  }
+  body aside menu li[cheked=true] {
+    transform: translateX(0px) scale(1.5) !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  body aside {
+    letter-spacing: normal;
+  }
+  body aside menu {
+    margin: 5px;
+  }
 }
 @media (min-width: 68px) and (max-width: 768px) {
   body aside menu {
-    padding: 0px !important;
+    padding: 5px !important;
   }
 }
 body main {
@@ -120,6 +138,7 @@ body main section {
   justify-content: center;
 }
 body main section article {
+  overflow-x: hidden;
   width: 100%;
   background-color: white;
   height: 100%;
@@ -143,7 +162,9 @@ body main section .Introduction {
   flex-direction: column;
   gap: 5%;
   z-index: 2;
-  padding: 2%;
+  padding: 5%;
+  justify-content: flex-start;
+  overflow-y: scroll;
 }
 body main section .Introduction .bloc {
   display: flex;
@@ -203,7 +224,7 @@ body main section .Introduction .lists div ul {
 @media (min-width: 1100px) and (max-width: 1300px) {
   body main section .Introduction {
     left: 0;
-    padding: 15% 0 15% 0;
+    padding: 10% 5% 10% 5%;
   }
   body main section .Introduction img {
     height: 300px;
@@ -212,9 +233,6 @@ body main section .Introduction .lists div ul {
   body main section .Introduction .bloc {
     gap: 10px;
   }
-  body main section .Introduction article {
-    font-size: 0.93em;
-  }
   body main section .Introduction h4 {
     width: 200px !important;
   }
@@ -222,7 +240,7 @@ body main section .Introduction .lists div ul {
 @media (min-width: 992px) and (max-width: 1100px) {
   body main section .Introduction {
     left: 0;
-    padding: 15% 3% 15% 0;
+    padding: 10% 5% 10% 5%;
   }
   body main section .Introduction img {
     height: 300px;
@@ -247,6 +265,9 @@ body main section .Introduction .lists div ul {
   body main section .Introduction .bloc {
     gap: 0px;
   }
+  body main section .Introduction .lists {
+    gap: 3px;
+  }
   body main section .Introduction .lists div {
     margin: 5px;
     gap: 0px;
@@ -260,15 +281,17 @@ body main section .Introduction .lists div ul {
 body main section .Skills {
   letter-spacing: 0.8px;
   flex-direction: row;
-  padding: 5%;
-  gap: 90px;
+  padding: 8% 0 8% 10%;
+  gap: 15%;
 }
 body main section .Skills ul {
   display: flex;
   flex-direction: column;
-  margin: 20px;
 }
 body main section .Skills ul li {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   margin: 5px;
 }
 body main section .Skills ul li:nth-of-type(1) {
@@ -282,7 +305,7 @@ body main section .Skills ul li h3 {
 body main section .Skills div {
   display: flex;
   flex-direction: column;
-  gap: 70px;
+  gap: 100px;
 }
 body main section .Skills div ul ul {
   display: flex;
@@ -299,6 +322,14 @@ body main section .Skills div ul ul li:nth-of-type(1) {
 }
 body main section .Skills div ul ul li h3 {
   list-style: none;
+}
+@media (max-height: 830px) {
+  body main section .Skills {
+    align-items: flex-start;
+  }
+  body main section .Skills li {
+    margin: 3px !important;
+  }
 }
 body main section .Projects {
   overflow-x: scroll;

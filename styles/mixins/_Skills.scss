@@ -2,14 +2,17 @@
     letter-spacing: 0.8px;
 
     flex-direction: row;
-    padding: 5%;
-    gap: 90px;
+    padding: 8% 0 8% 10% ;
+   
+
+    gap: 15%;
     ul {
         display: flex;
         flex-direction: column;
 
-        margin: 20px;
+       
         li {
+            width: fit-content;
             margin: 5px;
             &:nth-of-type(1) {
                 list-style: none;
@@ -24,7 +27,7 @@
     div {
         display: flex;
         flex-direction: column;
-        gap: 70px;
+        gap: 100px;
         ul {
             ul {
                 display: flex;
@@ -43,6 +46,18 @@
                     }
                 }
             }
+        }
+    }
+    @media (max-width: 768px) {
+         
+    }
+    @media(max-width: 576px) {
+        
+    }
+    @media (max-height: 830px) {
+        align-items: flex-start;
+        li{
+            margin: 3px !important;
         }
     }
 }
