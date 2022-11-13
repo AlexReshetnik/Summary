@@ -158,7 +158,7 @@ body aside menu nav li img {
     bottom: 0;
   }
   body nav {
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-direction: row !important;
   }
   body nav li {
@@ -166,7 +166,7 @@ body aside menu nav li img {
     flex-direction: column !important;
   }
   body article {
-    padding-bottom: 150px !important;
+    padding-bottom: 150px;
   }
 }
 body main {
@@ -477,6 +477,7 @@ body main section .Projects ul li div p {
 }
 body main section .Contacts {
   left: -5%;
+  padding: 0;
 }
 body main section .Contacts ul li {
   margin: 20px;
