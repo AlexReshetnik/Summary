@@ -465,6 +465,9 @@ body main section .Projects ul li div p {
   body main section .Projects video {
     width: 90%;
   }
+  body main section .Projects p {
+    padding: 20px;
+  }
 }
 body main section .Contacts {
   left: -5%;
