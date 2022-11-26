@@ -7,10 +7,6 @@ let styleAside = getComputedStyle(aside)
 let link_of_page = document.querySelectorAll('li[data-page_id]')
 
 
-console.log(parseFloat(getComputedStyle(main).width));
-console.log(parseFloat(styleAside.width));
-
-
 if (document.body.clientWidth > 768) {
     main.style.marginLeft = styleAside.width
 }
@@ -37,6 +33,11 @@ function rum_anim() {
         })
     })
 }
+
+
+
+
+
 
 menu.addEventListener('click', e => {
 
